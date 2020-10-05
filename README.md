@@ -5,8 +5,6 @@ It is useful for proxying things from a SLURM job.
 I mainly use it to proxy SSH so I can SFTP into a SLURM node.
 
 * `run.sh` builds and runs the dockerfile.
-* `connect.sh` proxys port 22350 to your localhost.
-  * It runs `ssh -L 22350:localhost:22350 root@localhost -p 22450`
 
 On your slurm job:
 * Run sshd on a free port
