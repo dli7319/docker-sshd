@@ -10,6 +10,6 @@ docker run -d \
 				   --restart unless-stopped \
 			     -p $SSH_PORT:22 \
 			     -p $PROXY_PORT:$PROXY_PORT \
-			     -v "/$(pwd)/.ssh:/root/.ssh" \
+			     -v "${DIR}/.ssh:/root/.ssh" \
 				   -v "${DIR}/data:/root/data" \
            $IMAGE_NAME
