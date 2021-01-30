@@ -7,9 +7,9 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 docker build -t $IMAGE_NAME .
 docker run -d \
-				   --restart unless-stopped \
-			     -p $SSH_PORT:22 \
-			     -p $PROXY_PORT:$PROXY_PORT \
-			     -v "${DIR}/.ssh:/root/.ssh" \
-				   -v "${DIR}/data:/root/data" \
-           $IMAGE_NAME
+  --restart unless-stopped \
+  -p $SSH_PORT:22 \
+  -p $PROXY_PORT:$PROXY_PORT \
+  -v "${DIR}/.ssh:/root/.ssh" \
+  -v "${DIR}/data:/root/data" \
+  $IMAGE_NAME
