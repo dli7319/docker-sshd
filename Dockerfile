@@ -1,7 +1,6 @@
 FROM debian:buster
 
-RUN apt update
-RUN apt install -y openssh-server rsync
+RUN apt-get update && apt-get install -y openssh-server rsync
 
 RUN echo 'root:m_root_pwd' | chpasswd
 RUN echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config
